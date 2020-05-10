@@ -92,52 +92,6 @@
           <div><a href="#product" class="btn-get-started scrollto">Subscribe now</a></div>
         </div>
 
-        <!-- Load Stripe.js on your website. -->
-<script src="https://js.stripe.com/v3"></script>
-
-<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-<button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  id="checkout-button-plan_HFYxSTKPX2s18a"
-  role="link"
->
-  Checkout
-</button>
-
-<div id="error-message"></div>
-
-<script>
-(function() {
-  var stripe = Stripe('pk_live_PTL9BNgQVM7H9xfEEdpGOffc00nLlR8U2m');
-
-  var checkoutButton = document.getElementById('checkout-button-plan_HFYxSTKPX2s18a');
-  checkoutButton.addEventListener('click', function () {
-    // When the customer clicks on the button, redirect
-    // them to Checkout.
-    stripe.redirectToCheckout({
-      items: [{plan: 'plan_HFYxSTKPX2s18a', quantity: 1}],
-
-      // Do not rely on the redirect to the successUrl for fulfilling
-      // purchases, customers may not always reach the success_url after
-      // a successful payment.
-      // Instead use one of the strategies described in
-      // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: 'https://strandhk.club/success',
-      cancelUrl: 'https://strandhk.club/canceled',
-    })
-    .then(function (result) {
-      if (result.error) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer.
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
-
-
         <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
           <img src="assets/img/DancingDoogle.svg" class="img-fluid animated" alt="">
         </div>
@@ -162,7 +116,7 @@
             <div class="icon-box mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
               <i class="bx bx-receipt"></i>
               <h4>1. Choose your prescription</h4>
-              <p>Tell us your prescription & base curve. Don't know it? Check the side of your box</p>
+              <p>Tell us your prescription & base curve. Don't know it? Check the side of your box.</p>
             </div>
             <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="200">
               <i class="bx bx-cube-alt"></i>
@@ -172,7 +126,7 @@
             <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="300">
               <i class="bx bx-images"></i>
               <h4>3. Sip your smoothie and relax</h4>
-              <p>Your contacts will shop up at your doorstep every month. Know that you'll never run out of contacts again</p>
+              <p>Your contacts will show up at your doorstep every month. Know that you'll never run out of contacts again. Huzzah!</p>
             </div>
             <!-- <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="400">
               <i class="bx bx-shield"></i>
@@ -193,12 +147,12 @@
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>1 Day Acuvue Moist</h2>
+          <h3>HK$150/box</h3>
         </div>
-
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150">
-            <img src="assets/img/portfolio/AcuvueMoistclearbackground.png" class="img-fluid" alt="">
+            <img src="assets/img/acuvuemoist.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
             <!-- <h3>Voluptatem dignissimos provident quasi corporis</h3>
@@ -211,9 +165,11 @@
               <li><i class="icofont-check-circled"></i> Comfortable all-day wear, even if your eyes are prone to sensitivity, irritation or allergies</li>
               <li><i class="icofont-check-circled"></i> Each lens features exclusive technology for a long-lasting cushion of moisture</li>
               <li><i class="icofont-check-circled"></i> Contains the highest level of UV protection available in a contact lens</li>
+              <li><i class="icofont-check-circled"></i> <s>HK$165</s> HK$150/box launch promotion offer. Includes free shipping to HK, no extra charges for credit cards</li>
+
             </ul>
-            <a href="#" class="read-more">Start my subscription <i class="icofont-long-arrow-right"></i></a>
-            <p>want another product? </p>
+            <a href="http://eepurl.com/g2Uq9z" class="read-more">Start my subscription <i class="icofont-long-arrow-right"></i></a>
+            <p>want another product? <a href="mailto:jo@strandhk.club">Email us!</a></p>
 
           </div>
         </div>
@@ -254,7 +210,7 @@
               <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-3" class="collapsed">How does the monthly subscription work? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-3" class="collapse" data-parent=".faq-list">
                 <p>
-                  blah blha
+                  Every month you'll get an email reminder 7 days before we bill you via Stripe. If you don't pause or cancel then a few days after billing we'll package your contacts with care and send it off with love. You don't have to lift a finger.
                 </p>
               </div>
             </li>
@@ -263,16 +219,16 @@
               <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-4" class="collapsed">Can I pause or cancel my subscription anytime? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-4" class="collapse" data-parent=".faq-list">
                 <p>
-                  Yes! We totally understand the need to be flexible, so you can stop & start your subscription at any time. It’s as simple as <>
+                  Yes! We totally understand the need to be flexible, so you can stop & start your subscription at any time through Stripe. If for whatever reason you can't via Stripe we're always just  an email away at  jo@strandhk.club!
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="500">
-              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-5" class="collapsed">How do you handle payments? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-5" class="collapse" data-parent=".faq-list">
                 <p>
-                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                  All of our payments are handled via Stripe. We don't store your credit card information anywhere and you can cancel or pause your subscription any time.
                 </p>
               </div>
             </li>
@@ -371,42 +327,37 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Techie</h3>
+            <h3>The Strand</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              <!-- <strong>Email:</strong> jo@strandhk.club<br> -->
             </p>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li> -->
+              <li><i class="bx bx-chevron-right"></i> <a href="terms.html">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="privacy.html">Privacy policy</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            <ul >
+              <li><i class="bx bx-chevron-right"></i> <a href="#how">How it Works</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#product">Product</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#faqs">FAQs</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
+            <h4>Join the Club</h4>
+            <p>Not ready to buy yet? No worries, drop us your email so we can keep you updated on offers & other goodies. </p>
+            <form action="https://landing.mailerlite.com/webforms/landing/y4e0n7" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
           </div>
@@ -424,13 +375,13 @@
           </div>
 
         </div>
-        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <!-- <div class="social-links text-center text-md-right pt-3 pt-md-0">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
           <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
           <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
           <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
+        </div> -->
       </div>
 
     </div>

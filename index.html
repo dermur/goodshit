@@ -66,12 +66,58 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <p class="lead">How it works:<br> 1) Select your prescription & base curve <br>2) Enter your details <br>3) Sit back, sip a smoothie, know that you'll never run out of contacts again</p>
+          <p class="lead">What else?<br>• HKD150/box <br> • Free shipping to anywhere in Hong Kong <br> • ~3/4 days for shipping</p>
           <p class="lead">During beta we're only shipping Acuvue Moist lens. Want us to stock your brand? Let us know what you normally wear & we’ll source it just for you. Because you're special.</p>
 
         </div>
       </div>
     </div>
   </section>
+
+
+  <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+  <button
+    style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+    id="checkout-button-plan_HFK987DmbEmAc8"
+    role="link"
+  >
+    Checkout
+  </button>
+
+  <div id="error-message"></div>
+
+  <script>
+  (function() {
+    var stripe = Stripe('pk_live_PTL9BNgQVM7H9xfEEdpGOffc00nLlR8U2m');
+
+    var checkoutButton = document.getElementById('checkout-button-plan_HFYxSTKPX2s18a');
+    checkoutButton.addEventListener('click', function () {
+      // When the customer clicks on the button, redirect
+      // them to Checkout.
+      stripe.redirectToCheckout({
+        items: [{plan: 'plan_HFYxSTKPX2s18a', quantity: 1}],
+
+        // Do not rely on the redirect to the successUrl for fulfilling
+        // purchases, customers may not always reach the success_url after
+        // a successful payment.
+        // Instead use one of the strategies described in
+        // https://stripe.com/docs/payments/checkout/fulfillment
+        successUrl: 'https://strandhk.club/success',
+        cancelUrl: 'https://strandhk.club/canceled',
+        billingAddressCollection: 'required',
+
+      })
+      .then(function (result) {
+        if (result.error) {
+          // If `redirectToCheckout` fails due to a browser or network
+          // error, display the localized error message to your customer.
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
+    });
+  })();
+  </script>
 
   <section id="form" style="background-color: #060028;">
     <div class="container">
@@ -145,6 +191,8 @@
 
   <!-- Custom JavaScript for this theme -->
   <script src="js/scrolling-nav.js"></script>
+
+
 
 </body>
 

@@ -91,53 +91,6 @@
 
           <div><a href="#product" class="btn-get-started scrollto">Subscribe now</a></div>
         </div>
-
-        <!-- Load Stripe.js on your website. -->
-<script src="https://js.stripe.com/v3"></script>
-
-<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-<button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  id="checkout-button-plan_HFYxSTKPX2s18a"
-  role="link"
->
-  Checkout
-</button>
-
-<div id="error-message"></div>
-
-<script>
-(function() {
-  var stripe = Stripe('pk_live_PTL9BNgQVM7H9xfEEdpGOffc00nLlR8U2m');
-
-  var checkoutButton = document.getElementById('checkout-button-plan_HFYxSTKPX2s18a');
-  checkoutButton.addEventListener('click', function () {
-    // When the customer clicks on the button, redirect
-    // them to Checkout.
-    stripe.redirectToCheckout({
-      items: [{plan: 'plan_HFYxSTKPX2s18a', quantity: 1}],
-
-      // Do not rely on the redirect to the successUrl for fulfilling
-      // purchases, customers may not always reach the success_url after
-      // a successful payment.
-      // Instead use one of the strategies described in
-      // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: 'https://strandhk.club/success',
-      cancelUrl: 'https://strandhk.club/canceled',
-    })
-    .then(function (result) {
-      if (result.error) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer.
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
-
-
         <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
           <img src="assets/img/DancingDoogle.svg" class="img-fluid animated" alt="">
         </div>
@@ -197,8 +150,8 @@
 
 
         <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150">
-            <img src="assets/img/portfolio/AcuvueMoistclearbackground.png" class="img-fluid" alt="">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150" >
+            <!-- <img src="assets/img/portfolio/AcuvueMoistclearbackground.png" class="img-fluid"  alt=""> -->
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
             <!-- <h3>Voluptatem dignissimos provident quasi corporis</h3>

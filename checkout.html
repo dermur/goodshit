@@ -144,32 +144,36 @@
         <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
         <button
           style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-          id="checkout-button-plan_HFIyG0oukp6v1i"
+          id="checkout-button-plan_HFmqBUJmZMHJAq"
           role="link"
         >
-          Pay via Stripe
+          Checkout
         </button>
 
         <div id="error-message"></div>
 
         <script>
         (function() {
-          var stripe = Stripe('pk_test_36czJTGDi7tg4hrIu4chgu6200maITBGIm');
+          var stripe = Stripe('pk_live_PTL9BNgQVM7H9xfEEdpGOffc00nLlR8U2m');
 
-          var checkoutButton = document.getElementById('checkout-button-plan_HFIyG0oukp6v1i');
+          var checkoutButton = document.getElementById('checkout-button-plan_HFmqBUJmZMHJAq');
           checkoutButton.addEventListener('click', function () {
             // When the customer clicks on the button, redirect
             // them to Checkout.
             stripe.redirectToCheckout({
-              items: [{plan: 'plan_HFIyG0oukp6v1i', quantity: 1}],
+              items: [{plan: 'plan_HFmqBUJmZMHJAq', quantity: 1}],
 
               // Do not rely on the redirect to the successUrl for fulfilling
               // purchases, customers may not always reach the success_url after
               // a successful payment.
               // Instead use one of the strategies described in
               // https://stripe.com/docs/payments/checkout/fulfillment
-              successUrl: 'https://strandhk.club/success',
-              cancelUrl: 'https://strandhk.club/canceled',
+              successUrl: 'https://strandhk.club/success.html',
+              cancelUrl: 'https://strandhk.club/canceled.html',
+              shippingAddressCollection: {
+                allowedCountries: ['HK'],
+              }
+
             })
             .then(function (result) {
               if (result.error) {
@@ -182,7 +186,6 @@
           });
         })();
         </script>
-
 
       </div>
     </section><!-- End Portfolio Details Section -->

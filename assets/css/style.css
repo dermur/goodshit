@@ -37,7 +37,7 @@
 }
 
 @font-face {
-  font-family: FuturaLT;
+  font-family: 'FuturaLT';
   src:  url('../fonts/FuturaLT.ttf') format('truetype'),
         url("../fonts/FuturaLT.woff") format("woff"),
         url("../fonts/FuturaLT.woff2") format("woff");
@@ -50,8 +50,8 @@
 body {
   /* font-family: "Open Sans", sans-serif; */
   /*font-family: 'Inconsolata', monospace;*/
-  /*font-family: 'FuturaLT', sans-serif;*/
-  font-family: AppleGaramond-Light, serif;
+  font-family: 'FuturaLT', sans-serif;
+  /* font-family: AppleGaramond-Light, serif; */
   font-size: 20px;
   color: #000000;
   background-color: #acbfaf;
@@ -81,7 +81,7 @@ h1 {
   /* font-family: "Poppins", sans-serif; */
   /*font-family: 'Jost', sans-serif;*/
   /*font-family: AppleGaramond-Light, serif;*/
-  font-family: FuturaLT, sans-serif;
+  font-family: "FuturaLT", sans-serif;
   /*font-family: Gotham-UltraItalic, san-serif;  */
 
 }
@@ -112,7 +112,7 @@ h4 {
   /* font-family: "Poppins", sans-serif; */
   /*font-family: 'Jost', sans-serif;*/
   /*font-family: AppleGaramond-Light, serif;*/
-  font-family: FuturaLT, sans-serif;
+  font-family: "FuturaLT", sans-serif;
 
 }
 

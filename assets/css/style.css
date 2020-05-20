@@ -38,7 +38,9 @@
 
 @font-face {
   font-family: FuturaLT;
-  src: url('../fonts/FuturaLT.ttf') format('truetype');
+  src:  url('../fonts/FuturaLT.ttf') format('truetype'),
+        url("css/fonts/FuturaLT.woff") format("woff"),
+        url("css/fonts/FuturaLT.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -76,7 +78,7 @@ a:hover {
 
 
 h1 {
-  /* font-family: "Poppins", sans-serif; */ 
+  /* font-family: "Poppins", sans-serif; */
   /*font-family: 'Jost', sans-serif;*/
   /*font-family: AppleGaramond-Light, serif;*/
   font-family: FuturaLT, sans-serif;
@@ -87,7 +89,7 @@ h1 {
 
 
 h2 {
-  /* font-family: "Poppins", sans-serif; */ 
+  /* font-family: "Poppins", sans-serif; */
   /*font-family: 'Jost', sans-serif;*/
   font-family: AppleGaramond-LightItalic, serif;
   /*font-family: FuturaLT, sans-serif;*/
@@ -97,17 +99,17 @@ h2 {
 
 
 h3 {
-  /* font-family: "Poppins", sans-serif; */ 
+  /* font-family: "Poppins", sans-serif; */
   /*font-family: 'Jost', sans-serif;*/
   /*font-family: AppleGaramond-Light, serif;*/
-  font-family: Gotham-UltraItalic, san-serif;  
+  font-family: Gotham-UltraItalic, san-serif;
 
 
 }
 
 
 h4 {
-  /* font-family: "Poppins", sans-serif; */ 
+  /* font-family: "Poppins", sans-serif; */
   /*font-family: 'Jost', sans-serif;*/
   /*font-family: AppleGaramond-Light, serif;*/
   font-family: FuturaLT, sans-serif;
@@ -123,7 +125,7 @@ h5 {
 
 
 h6 {
-  /* font-family: "Poppins", sans-serif; */ 
+  /* font-family: "Poppins", sans-serif; */
   /*font-family: 'Jost', sans-serif;*/
   font-family: FuturaLT, sans-serif;
 }
@@ -530,14 +532,14 @@ h6 {
 #hero {
   /*width: 100%;
   height: 100vh;*/
-/*  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8)), /*url("../img/background.jpg"*/);  
+/*  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8)), /*url("../img/background.jpg"*/);
   background-color: #acbfaf;
 /*  background-size: cover;
 */
 /*  background-position: bottom;
 */  /*background-size: cover;*/
 /*  text-align: center;
-*/} 
+*/}
 
 #hero .main-image {
     margin:100px -100px 0px 0px
@@ -592,7 +594,7 @@ h6 {
 }
 
 #hero h5 {
-  /* color: rgba(255, 255, 255, 0.8); */  
+  /* color: rgba(255, 255, 255, 0.8); */
   margin: 0px 0 0 0px;
   font-size: 1em;
   color: #ffffff;
@@ -639,7 +641,7 @@ h6 {
     padding-left: 80px;
     padding-right: 80px;
    }
-  
+
   #hero .newsletter form {
   margin-top: 30px;
   background: #fff;
@@ -650,7 +652,7 @@ h6 {
   width:340px;
 /*  margin: auto;*/
   }
- 
+
 }
 
 @media (max-width: 1199px) {
@@ -696,8 +698,8 @@ h6 {
   }
   #hero .hero-img {
     text-align: center;
-  } 
-  
+  }
+
 
   #hero .newsletter form {
     margin-top: 30px;
@@ -749,7 +751,7 @@ h6 {
   #hero h3 {
     font-size: 4em;
     line-height: .8em;
-  }  
+  }
 
   #hero h4 {
     font-size: 1em;
@@ -757,14 +759,14 @@ h6 {
     margin-left: 0px;
     text-align:center;
 
-  }  
+  }
 
   #hero h5 {
     font-size: 0.9em;
     line-height: 1em;
     margin-left: 0px;
     text-align:center;
-  }  
+  }
 
   #hero h6 {
     font-size: 0.8em;
@@ -772,7 +774,7 @@ h6 {
     margin-left: 0px;
     text-align:center;
 
-  }  
+  }
 
 
   #hero .hero-img img {
@@ -786,7 +788,7 @@ h6 {
   }
 
   #hero .links {
-    margin: auto;   
+    margin: auto;
     justify-content:center;
     text-align-last: center;
     }
@@ -846,7 +848,7 @@ h6 {
   text-align: left;
 /*  width:340px;
 *//*  width:100%;
-*//*  border: 1px solid grey;*/  
+*//*  border: 1px solid grey;*/
 /*  margin: auto;*/
 }
 
@@ -864,18 +866,18 @@ h6 {
   top: 0px;
   right: 0px;
   bottom: 0px;
-/*  border: 0.5px solid grey;*/  
-/*  background: #58FF00;*/  
+/*  border: 0.5px solid grey;*/
+/*  background: #58FF00;*/
   font-size: 18px;
   font-family: FuturaLT, sans-serif;
   padding: 0 20px;
-/*  background: rgba(0, 0, 0, 0.1);*/ 
+/*  background: rgba(0, 0, 0, 0.1);*/
   color: #ff5500;
   transition: 0.3s;
 /*  border-radius: 0 5px 5px 0;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);*/
 }
- 
+
 
 
 #hero .newsletter form input[type="submit"]:hover {
@@ -893,8 +895,8 @@ h6 {
 #hero .links {
   border: 0;
   height: 100px;
-  display: flex;                  
-  align-items: flex-end;  
+  display: flex;
+  align-items: flex-end;
   margin: 0 px;
 /* margin:0 0 0 80px;
 */
@@ -921,14 +923,14 @@ h6 {
       color: #00332e;
       cursor: pointer;
       font-size: 18px;
-      text-decoration: underline; 
+      text-decoration: underline;
       text-decoration-color: #ff5500;
       text-underline-position: under;
       text-align:center;
       width: 120px;
       padding: 8px 8px;
     }
-      
+
       #mailchimp input[type="submit"]:hover { color: #ff5500;
       }
 
@@ -1043,8 +1045,8 @@ section {
 
 #counts.counts-bg {
   /*width: 100%;
-  height: 50vh;  
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(100, 100, 100, 0.8)), url("../img/plants.jpg"); 
+  height: 50vh;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(100, 100, 100, 0.8)), url("../img/plants.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1057,8 +1059,8 @@ padding: 0 0%;
 }
 
 .counts {
-/*background: linear-gradient(90deg, rgba(88, 70, 249, 0.5) 0%, rgba(123, 39, 216, 0.5) 100%), url("../img/counts-bg.png") center center no-repeat;  
-background: #58FF00; 
+/*background: linear-gradient(90deg, rgba(88, 70, 249, 0.5) 0%, rgba(123, 39, 216, 0.5) 100%), url("../img/counts-bg.png") center center no-repeat;
+background: #58FF00;
 */
 padding: 0px 0px 30px 0px;
 /*max-width: 80%;
@@ -1836,8 +1838,8 @@ justify-content:center;
 
 #newsletter.newsletter-bg {
   /*width: 100%;
-  height: 50vh;  
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(100, 100, 100, 0.8)), url("../img/plants.jpg"); 
+  height: 50vh;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(100, 100, 100, 0.8)), url("../img/plants.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

@@ -39,8 +39,8 @@
 @font-face {
   font-family: FuturaLT;
   src:  url('../fonts/FuturaLT.ttf') format('truetype'),
-        url("css/fonts/FuturaLT.woff") format("woff"),
-        url("css/fonts/FuturaLT.woff2") format("woff");
+        url("../fonts/FuturaLT.woff") format("woff"),
+        url("../fonts/FuturaLT.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
 }

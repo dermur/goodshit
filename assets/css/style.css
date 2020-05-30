@@ -198,8 +198,8 @@ ul > li:before {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #5846f9;
-  border-top-color: #e7e4fe;
+  border: 6px solid #000;
+  border-top-color: #fff;
   border-radius: 50%;
   width: 60px;
   height: 60px;

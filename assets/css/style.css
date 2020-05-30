@@ -8,7 +8,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-/*@font-face {
+@font-face {
   font-family: AppleGaramond-Light;
   src: url('../fonts/AppleGaramond-Light.ttf') format('truetype');
   font-weight: normal;
@@ -33,14 +33,12 @@
   font-family: AppleGaramond;
   src: url('../fonts/AppleGaramond.ttf') format('truetype');
   font-weight: normal;
-  font-style: normal;*/
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'FuturaLT';
-  src:  url('../fonts/FuturaLT.ttf') format('truetype'),
-        url("../fonts/FuturaLT.woff") format("woff"),
-        url("../fonts/FuturaLT.woff2") format("woff");
+  font-family: FuturaLT;
+  src: url('../fonts/FuturaLT.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -51,37 +49,38 @@ body {
   /* font-family: "Open Sans", sans-serif; */
   /*font-family: 'Inconsolata', monospace;*/
   font-family: 'FuturaLT', sans-serif;
-  /* font-family: AppleGaramond-Light, serif; */
-  font-size: 20px;
+/*  font-family: AppleGaramond-Light, serif;
+  font-size: 20px; */
   color: #000000;
-  background-color: #acbfaf;
-}
+  background-image: linear-gradient(rgba(244,228,184,1),rgba(255,255,255,1));
+/*  background-color: #acbfaf;
+*/}
 
 a {
-  color: #00332e;
-  text-decoration-line: underline;
+  color: #000;
+  /*text-decoration-line: underline;
   text-decoration-color: #ff5500;
-  text-decoration-style: solid;
+  text-decoration-style: solid;*/
 /*  text-underline-position: under;
-*/  font-family: FuturaLT, sans-serif;
+*/  /*font-family: FuturaLT, sans-serif;*/
 }
 
 a:hover {
-  color: #000;
-  background-color: #ceff00;
-  text-decoration-line: underline;
+  color: #ff5500;
+/*  background-color: #ff5500;
+*/ /* text-decoration-line: underline;
   text-decoration-color: #ceff00;
   text-decoration-style: solid;
-  font-family: FuturaLT, sans-serif;
+  font-family: FuturaLT, sans-serif;*/
 
 }
 
 
 h1 {
-  /* font-family: "Poppins", sans-serif; */
+  /* font-family: "Poppins", sans-serif; */ 
   /*font-family: 'Jost', sans-serif;*/
   /*font-family: AppleGaramond-Light, serif;*/
-  font-family: "FuturaLT", sans-serif;
+  font-family: FuturaLT, sans-serif;
   /*font-family: Gotham-UltraItalic, san-serif;  */
 
 }
@@ -89,7 +88,7 @@ h1 {
 
 
 h2 {
-  /* font-family: "Poppins", sans-serif; */
+  /* font-family: "Poppins", sans-serif; */ 
   /*font-family: 'Jost', sans-serif;*/
   font-family: AppleGaramond-LightItalic, serif;
   /*font-family: FuturaLT, sans-serif;*/
@@ -99,44 +98,43 @@ h2 {
 
 
 h3 {
-  /* font-family: "Poppins", sans-serif; */
+  /* font-family: "Poppins", sans-serif; */ 
   /*font-family: 'Jost', sans-serif;*/
-  /*font-family: AppleGaramond-Light, serif;*/
-  font-family: Gotham-UltraItalic, san-serif;
+  font-family: AppleGaramond-Light, serif;
 
 
 }
 
 
 h4 {
-  /* font-family: "Poppins", sans-serif; */
+  /* font-family: "Poppins", sans-serif; */ 
   /*font-family: 'Jost', sans-serif;*/
   /*font-family: AppleGaramond-Light, serif;*/
-  font-family: "FuturaLT", sans-serif;
+  font-family: FuturaLT, sans-serif;
 
 }
 
 
 h5 {
-   font-family: FuturaLT, sans-serif;
+  font-family: AppleGaramond, serif;
 }
 
 
 
 
 h6 {
-  /* font-family: "Poppins", sans-serif; */
+  /* font-family: "Poppins", sans-serif; */ 
   /*font-family: 'Jost', sans-serif;*/
   font-family: FuturaLT, sans-serif;
 }
-
+/*
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
 
 }
-
+*/
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -163,7 +161,7 @@ h6 {
 }
 
 .back-to-top i:hover {
-  background: #58FF00;
+  background: #ff5500;
   color: #000;
 }
 
@@ -228,12 +226,12 @@ h6 {
 #header {
   transition: all 0.5s;
   z-index: 997;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 #header.header-scrolled, #header.header-inner-pages {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 12px 0;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 0px 0;
 }
 
 #header .logo {
@@ -527,52 +525,76 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Mobile Image Section
+--------------------------------------------------------------*/
+
+#content-mobile-top {display: none; }
+#content-mobile-bottom {display: none;}
+#content-desktop {display: block;}
+
+
+
+
+/*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  /*width: 100%;
-  height: 100vh;*/
-/*  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8)), /*url("../img/background.jpg"*/);
-  background-color: #acbfaf;
+  width: 100%;
+  min-height:100%;
+/*  height: 100vh;
+*//*  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8)), /*url("../img/background.jpg"*/);  
 /*  background-size: cover;
-*/
 /*  background-position: bottom;
 */  /*background-size: cover;*/
 /*  text-align: center;
-*/}
+*/} 
 
-#hero .main-image {
+/*#hero .main-image {
     margin:100px -100px 0px 0px
-  }
+  }*/
+
+
 
 #hero .container, #hero .container-fluid {
   padding-top: 10px;
 
 }
 
-#hero .icons {
+/*#hero .icons {
     text-align:left;
     margin:0px 0px 0px 0px
-  }
+  }*/
 
 
 #hero h1 {
-  margin: 100px 0px 0 0;
-  margin-left: 0px;
-  font-size: 3.2em;
-  line-height: 0.8em;
-  color: #ceff00;
+  margin: 120px 20px 0 0;
+  font-size: 2.5em;
+  line-height: 1em;
+  color: #000;
   text-align: left;
 }
 
 #hero h2 {
   /* color: rgba(255, 255, 255, 0.8); */
-  margin: 0px 0 0 0;
-  font-size: 6.5em;
-  line-height: .8em;
-  color: #fff;
-  text-align: center;
+/*  margin: 0px 0 0 0;
+*/  font-size: 2.5em;
+  line-height: 1em;
+  color: #000;
+  text-align: left;
 }
+
+#hero h2 a {
+    color: #000;
+  font-family: AppleGaramond-Italic, serif;
+}
+
+#hero h2 a:hover {
+    color: #ff5500;
+    font-family: AppleGaramond-Italic, serif;
+    text-decoration: none;
+}
+
+
 
 #hero h3 {
   /* color: rgba(255, 255, 255, 0.8); */
@@ -584,8 +606,8 @@ h6 {
 
 
 #hero h4 {
-  color: #ceff00;
-  font-size: 1em;
+  color: #000;
+  font-size: 1.2em;
   line-height: 1.4em;
   text-align: left;
   margin: 0px 0 0 0px;
@@ -594,31 +616,54 @@ h6 {
 }
 
 #hero h5 {
-  /* color: rgba(255, 255, 255, 0.8); */
+  /* color: rgba(255, 255, 255, 0.8); */  
+  font-family: AppleGaramond-Italic, serif;
   margin: 0px 0 0 0px;
-  font-size: 1em;
-  color: #ffffff;
-  text-align: left;
+  font-size: 1.5em;
+  color: #000;
+  text-align: right;
+  padding-bottom: 5px;
+
 }
+
+#hero h5 a{
+  /* color: rgba(255, 255, 255, 0.8); */ 
+  font-family: AppleGaramond-Light, serif; 
+/*  text-decoration: underline;
+*/  margin: 0px 0 0 0px;
+  font-size: 0.8em;
+  color: #000;
+  text-align: right;
+  padding-bottom: 5px;
+}
+
+#hero h5 a:hover{
+  color: #ff5500;
+  text-decoration: none;
+
+
+}
+
+
+
 
 #hero h6 {
   /* color: rgba(255, 255, 255, 0.8); */
   margin: 0px 0 0 0px;
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #00332e;
   text-align: left;
 }
 
 
 
-#hero .btn-get-started {
+/*#hero .btn-get-started {
   font-family: AppleGaramond-Light, serif;
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 1px;
   display: inline-block;
   padding: 10px 28px;
-  /*border-radius: 5px;*/
   transition: 0.5s;
   margin-top: 30px;
   background: #fff;
@@ -629,7 +674,7 @@ h6 {
   color: #ffffff;
   background: #FF5500;
 
-}
+}*/
 
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
@@ -642,7 +687,11 @@ h6 {
     padding-right: 80px;
    }
 
-  #hero .newsletter form {
+   /*#hero-text {
+padding-right:50px;
+}*/
+  
+/*  #hero .newsletter form {
   margin-top: 30px;
   background: #fff;
   padding: 6px 10px;
@@ -650,74 +699,102 @@ h6 {
   border-radius: 0px;
   text-align: left;
   width:340px;
-/*  margin: auto;*/
-  }
+  }*/
+ 
+#content-desktop {
+  display: block;
+  padding:100px 0 0 0;
+}
+
 
 }
 
 @media (max-width: 1199px) {
-#hero .newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 0px;
-  text-align: left;
-  width:340px;
-/*  margin: auto;*/
-  }
+
+  #hero {
+    padding-left: 50px;
+    padding-right: 50px;
+    height:100%;
+/*    width:100%;
+*/  }
+/*
+  #hero-text {
+padding-right:50px;
+}
+*/
+#content-desktop {
+padding:100px 0 0 0;}
 
 }
 
 
 @media (max-width: 991px) {
   #hero {
-    text-align: center;
-    margin:0px 0px 0px 0;
+/*    text-align: center;
+*/  margin:0px 0px 0px 0;
     min-height: 100%;
     max-height: 100%;
-
+/*    width:100%;*/
+  /*  padding-left: 20px;
+    padding-right: 20px;*/
   }
+
+    #content-desktop {
+  display: block;
+  padding:50px 0 0 0;
+}
 
   #hero h1 {
     font-size: 2.8em;
-    margin-top: 0px;
+    margin: 70px 20px 0px 0px;
   }
 
-  #hero .main-image {
+#hero h4 {
+    margin: 0px 20px 0px 0px;
+  }
+
+  /*#hero .main-image {
     text-align:center;
     margin:0px -100px 0px 0px
-  }
+  }*/
 
   #hero .container, #hero .container-fluid {
     padding-top: 68px;
   }
+
   #hero .animated {
     -webkit-animation: none;
     animation: none;
   }
-  #hero .hero-img {
-    text-align: center;
-  }
 
-
-  #hero .newsletter form {
-    margin-top: 30px;
-    background: #fff;
-    padding: 6px 10px;
-    position: relative;
-    border-radius: 0px;
-    text-align: left;
-    width:340px;
-  /*  margin: auto;*/
-    }
+  
 }
 
 @media (max-width: 768px) {
   #hero {
-  width: 100%;
-  height: 100%;
+/*  width: 100%;
+*/  height: 100%;
   }
+
+#hero h1 {
+    margin: 70px 20px 0px 0px;
+  }
+
+#hero h4 {
+    margin: 0px 20px 0px 0px;
+  }
+
+  #mailchimp {
+  text-align:center;
+  padding-top: 0px;
+}
+
+    #mailchimp input {
+    width: 200px;  
+    margin:auto;  
+
+  }
+
 
 #hero .newsletter form {
     margin-top: 30px;
@@ -738,79 +815,99 @@ h6 {
 
   #hero h1 {
     font-size: 2.5em;
-    line-height: .8em;
-    margin-left: 0px;
-    margin-top: -50px;
+    line-height: 1em;
+    margin: 50px 0px 0px 0px;
     text-align:center;
 
   }
   #hero h2 {
-    font-size: 6em;
-    line-height: .7em;
+    font-size: 2.5em;
+    line-height: 1em;
   }
   #hero h3 {
     font-size: 4em;
-    line-height: .8em;
-  }
+    line-height: 1em;
+  }  
 
   #hero h4 {
-    font-size: 1em;
-    line-height: .8em;
+    font-size: 1.2em;
+    line-height: 1.1em;
     margin-left: 0px;
     text-align:center;
 
-  }
+  }  
 
   #hero h5 {
-    font-size: 0.9em;
+    font-size: 1.5em;
     line-height: 1em;
     margin-left: 0px;
     text-align:center;
-  }
+/*    margin-top:-80px;
+*/  }  
 
   #hero h6 {
-    font-size: 0.8em;
+    font-size: 1em;
     line-height: 1em;
     margin-left: 0px;
     text-align:center;
 
-  }
+  }  
 
 
   #hero .hero-img img {
     margin-left: 0px;
   }
 
-  #hero .icons {
-    margin-left: 0px;
-    text-align:center;
-    margin-top:-50px;
-  }
 
-  #hero .links {
-    margin: auto;
-    justify-content:center;
-    text-align-last: center;
-    }
+#hero .icons {
+text-align:center;
+}
 
+  
 }
 
 
 @media (max-width: 575px) {
 
    #hero {
-  width: 100%;
-  min-height: 100%;
+ min-height: 100%;
+     padding-left: 0px;
+    padding-right: 0px;
   }
 
+   #hero h1 {
+/*text-align:left;
+*/    margin: 50px 0px 0px 0px;
+
+}  
+
+#hero h4 {
+    margin: 0px 0px 0px 0px;
+  }
+
+
+ #hero h5 {
+    font-size: 1.5em;
+   
+}  
+
+#hero .icons {
+/*text-align:left;
+*/padding:0px 0px 20px 0px;
+}
+
+
+#content-mobile-top {display: block;}
+#content-mobile-bottom {display: block; padding-top: 30px}
+#content-desktop {display: none;}
+
+
+
+/*
 #hero .newsletter form {
     width:100%;
-    }
+    }*/
 
-
-    #mailchimp input {
-    width: 100%;
-  }
 
 }
 
@@ -848,7 +945,7 @@ h6 {
   text-align: left;
 /*  width:340px;
 *//*  width:100%;
-*//*  border: 1px solid grey;*/
+*//*  border: 1px solid grey;*/  
 /*  margin: auto;*/
 }
 
@@ -866,18 +963,18 @@ h6 {
   top: 0px;
   right: 0px;
   bottom: 0px;
-/*  border: 0.5px solid grey;*/
-/*  background: #58FF00;*/
+/*  border: 0.5px solid grey;*/  
+/*  background: #58FF00;*/  
   font-size: 18px;
   font-family: FuturaLT, sans-serif;
-  padding: 0 20px;
-/*  background: rgba(0, 0, 0, 0.1);*/
+/*  padding: 0 0px;
+*//*  background: rgba(0, 0, 0, 0.1);*/ 
   color: #ff5500;
   transition: 0.3s;
 /*  border-radius: 0 5px 5px 0;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);*/
 }
-
+ 
 
 
 #hero .newsletter form input[type="submit"]:hover {
@@ -895,8 +992,8 @@ h6 {
 #hero .links {
   border: 0;
   height: 100px;
-  display: flex;
-  align-items: flex-end;
+  display: flex;                  
+  align-items: flex-end;  
   margin: 0 px;
 /* margin:0 0 0 80px;
 */
@@ -909,7 +1006,7 @@ h6 {
 
   #mailchimp input {
     border: none;
-    color: #00332e;
+    color: #000;
     font-family: FuturaLT, sans-serif;
     font-size: 16px;
 /*    font-style: italic;
@@ -920,17 +1017,17 @@ h6 {
     #mailchimp input.email { background: #fff }
     #mailchimp input[type="submit"] {
       background: none;
-      color: #00332e;
+      color: #000;
       cursor: pointer;
       font-size: 18px;
-      text-decoration: underline;
+      text-decoration: underline; 
       text-decoration-color: #ff5500;
       text-underline-position: under;
       text-align:center;
       width: 120px;
       padding: 8px 8px;
     }
-
+      
       #mailchimp input[type="submit"]:hover { color: #ff5500;
       }
 
@@ -946,7 +1043,7 @@ section {
 
 .section-bg {
   /*background-image: url("../img/background.jpg");*/
-  background-color: ##acbfaf;
+background-image: linear-gradient(red, yellow);
 }
 
 .section-title {
@@ -1045,8 +1142,8 @@ section {
 
 #counts.counts-bg {
   /*width: 100%;
-  height: 50vh;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(100, 100, 100, 0.8)), url("../img/plants.jpg");
+  height: 50vh;  
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(100, 100, 100, 0.8)), url("../img/plants.jpg"); 
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1059,8 +1156,8 @@ padding: 0 0%;
 }
 
 .counts {
-/*background: linear-gradient(90deg, rgba(88, 70, 249, 0.5) 0%, rgba(123, 39, 216, 0.5) 100%), url("../img/counts-bg.png") center center no-repeat;
-background: #58FF00;
+/*background: linear-gradient(90deg, rgba(88, 70, 249, 0.5) 0%, rgba(123, 39, 216, 0.5) 100%), url("../img/counts-bg.png") center center no-repeat;  
+background: #58FF00; 
 */
 padding: 0px 0px 30px 0px;
 /*max-width: 80%;
@@ -1838,8 +1935,8 @@ justify-content:center;
 
 #newsletter.newsletter-bg {
   /*width: 100%;
-  height: 50vh;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(100, 100, 100, 0.8)), url("../img/plants.jpg");
+  height: 50vh;  
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(100, 100, 100, 0.8)), url("../img/plants.jpg"); 
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2028,12 +2125,45 @@ justify-content:center;
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+
+
+
+@media (min-width: 1200px) {
+ #footer h6 {
+  padding-left: 100px;
+  padding-bottom:20px;
+  font-size:0.9em;
+
+  }
+}
+
+@media (max-width: 1199px) {
+  #footer h6 {
+      text-align: center;
+      padding-top:50px;
+      padding-bottom:20px;
+      font-size:0.9em;
+
+/*      padding-left: 80px;
+*/
+
+}
+
+
+@media (max-width: 768px) {
+  #footer h6 {
+      text-align: center;
+      padding-top:50px;
+      padding-bottom:20px;
+      font-size:0.9em;
+  }
+}
+
+
 #footer {
   color: #000;
-  font-size: 16px;
-  /*background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url("../img/hero-bg.jpg") center center no-repeat;*/
-  background-color: #d5e2d6
-  /*background-size: cover;*/
+  font-size:0.9em;
+
 }
 
 #footer .footer-top {

@@ -136,6 +136,20 @@ h6 {
 }
 */
 
+ul {
+  list-style-type: none;
+    padding-left: 1.5em;
+
+}
+
+ul > li:before {
+  content: "— ";
+  position: absolute;
+  margin-left: -1.5em; 
+}
+
+
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -706,6 +720,9 @@ padding-right:50px;
   padding:100px 0 0 0;
 }
 
+#hero li {
+    margin: 0px 20px 0px 0px;
+}
 
 }
 
@@ -724,6 +741,11 @@ padding-right:50px;
 */
 #content-desktop {
 padding:100px 0 0 0;}
+
+#hero li {
+    margin: 0px 20px 0px 0px;
+}
+
 
 }
 
@@ -752,6 +774,11 @@ padding:100px 0 0 0;}
 #hero h4 {
     margin: 0px 20px 0px 0px;
   }
+
+#hero li {
+    margin: 0px 20px 0px 0px;
+}
+
 
   /*#hero .main-image {
     text-align:center;
@@ -794,6 +821,10 @@ padding:100px 0 0 0;}
     margin:auto;  
 
   }
+
+#hero li {
+    margin: 0px 0px 0px 0px;
+}
 
 
 #hero .newsletter form {
@@ -888,8 +919,11 @@ text-align:center;
 
  #hero h5 {
     font-size: 1.5em;
-   
 }  
+
+#hero li {
+    margin: 0px 10px 0px 10px;
+}
 
 #hero .icons {
 /*text-align:left;

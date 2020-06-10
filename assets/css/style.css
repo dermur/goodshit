@@ -136,20 +136,6 @@ h6 {
 }
 */
 
-ul {
-  list-style-type: none;
-    padding-left: 1.5em;
-
-}
-
-ul > li:before {
-  content: "— ";
-  position: absolute;
-  margin-left: -1.5em; 
-}
-
-
-
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -198,8 +184,8 @@ ul > li:before {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #000;
-  border-top-color: #fff;
+  border: 6px solid #5846f9;
+  border-top-color: #e7e4fe;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -720,9 +706,6 @@ padding-right:50px;
   padding:100px 0 0 0;
 }
 
-#hero li {
-    margin: 0px 20px 0px 0px;
-}
 
 }
 
@@ -741,11 +724,6 @@ padding-right:50px;
 */
 #content-desktop {
 padding:100px 0 0 0;}
-
-#hero li {
-    margin: 0px 20px 0px 0px;
-}
-
 
 }
 
@@ -774,11 +752,6 @@ padding:100px 0 0 0;}
 #hero h4 {
     margin: 0px 20px 0px 0px;
   }
-
-#hero li {
-    margin: 0px 20px 0px 0px;
-}
-
 
   /*#hero .main-image {
     text-align:center;
@@ -821,10 +794,6 @@ padding:100px 0 0 0;}
     margin:auto;  
 
   }
-
-#hero li {
-    margin: 0px 0px 0px 0px;
-}
 
 
 #hero .newsletter form {
@@ -919,11 +888,8 @@ text-align:center;
 
  #hero h5 {
     font-size: 1.5em;
+   
 }  
-
-#hero li {
-    margin: 0px 10px 0px 10px;
-}
 
 #hero .icons {
 /*text-align:left;
@@ -1036,7 +1002,8 @@ text-align:center;
 
 #mailchimp {
   background: none;
-  }
+/*  text-align: center;
+*/  }
 
   #mailchimp input {
     border: none;
@@ -1946,84 +1913,60 @@ justify-content:center;*/
 }
 
 
-/*--------------------------------------------------------------
-# Images
---------------------------------------------------------------*/
 
-/*
-#images .img {
-    display:flex;
-align-items:center;
-justify-content:center;
-
-}
-*/
 
 /*--------------------------------------------------------------
 # Newsletter
 --------------------------------------------------------------*/
+#newsletter {
 
-#newsletter .newsletter {
-  font-size: 15px;
+  width: 100%;
+  min-height:100vh;
 }
 
-#newsletter.newsletter-bg {
-  /*width: 100%;
-  height: 50vh;  
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(100, 100, 100, 0.8)), url("../img/plants.jpg"); 
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;*/
-  background-color: #d5e2d6;
-  text-align: center;
+#newsletter h4 {
+text-align:center;
+color: #000;
+  font-size: 1.1em;
+  line-height: 1.4em;
+  margin: 0px 0 0 0px;
+
 }
 
-#newsletter .newsletter h4 {
-  font-size: 16px;
-  font-weight: bold;
-  position: relative;
-  padding-bottom: 12px;
-}
 
-#newsletter .newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 5px;
-  text-align: left;
-  border: 1px solid grey;
-  width:300px;
-  margin: auto;
-}
-
-#newsletter .newsletter form input[type="email"] {
-  border: 0;
-  padding: 4px 8px;
-  width: calc(100% - 100px);
-}
-
-#newsletter .newsletter form input[type="submit"] {
-  position: absolute;
-  top: -1px;
-  right: -2px;
-  bottom: -1px;
-  border: 0.5px solid grey;
+#newsletter .mailchimp {
   background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: rgba(255, 85, 0, 0.8);
-  color: #000;
-  transition: 0.3s;
-  border-radius: 0 5px 5px 0;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
+  text-align: center;
+  }
 
-#newsletter .newsletter form input[type="submit"]:hover {
-  background: rgba(88, 255, 0, 1);
+  #newsletter .mailchimp input {
+    border: none;
+    color: #000;
+    font-family: FuturaLT, sans-serif;
+    font-size: 16px;
+/*    font-style: italic;
+*/    margin-bottom: 10px;
+    padding: 8px 10px;
+/*    width: 300px;
+*/  }
+    #newsletter .mailchimp input.email { background: #fff }
+    #newsletter .mailchimp input[type="submit"] {
+      background: none;
+      color: #000;
+      cursor: pointer;
+      font-size: 18px;
+      text-decoration: underline; 
+      text-decoration-color: #ff5500;
+      text-underline-position: under;
+      text-align:center;
+      width: 120px;
+      padding: 8px 8px;
+    }
+      
+      #mailchimp input[type="submit"]:hover { color: #ff5500;
+      }
 
-}
+
 
 
 /*--------------------------------------------------------------
@@ -2164,8 +2107,10 @@ justify-content:center;
 
 @media (min-width: 1200px) {
  #footer h6 {
-  padding-left: 100px;
+  text-align: center;
+  padding-top:50px;
   padding-bottom:20px;
+  /*padding-left: 100px;*/
   font-size:0.9em;
 
   }
@@ -2177,9 +2122,6 @@ justify-content:center;
       padding-top:50px;
       padding-bottom:20px;
       font-size:0.9em;
-
-/*      padding-left: 80px;
-*/
 
 }
 
@@ -2197,158 +2139,5 @@ justify-content:center;
 #footer {
   color: #000;
   font-size:0.9em;
-
 }
 
-#footer .footer-top {
-  padding: 60px 0 30px 0;
-  position: relative;
-}
-
-#footer .footer-top .footer-contact {
-  margin-bottom: 30px;
-}
-
-#footer .footer-top .footer-contact h3 {
-  font-size: 28px;
-  margin: 0 0 30px 0;
-  padding: 2px 0 2px 0;
-  line-height: 1;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-#footer .footer-top .footer-contact p {
-  font-size: 16px;
-  line-height: 24px;
-  margin-bottom: 0;
-  font-family: AppleGaramond-Light, serif;
-}
-
-#footer .footer-top h4 {
-  font-size: 16px;
-  font-weight: bold;
-  position: relative;
-  padding-bottom: 12px;
-}
-
-#footer .footer-top .footer-links {
-  margin-bottom: 30px;
-}
-
-#footer .footer-top .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#footer .footer-top .footer-links ul i {
-  padding-right: 2px;
-  color: #000;
-  font-size: 18px;
-  line-height: 1;
-}
-
-#footer .footer-top .footer-links ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-#footer .footer-top .footer-links ul li:first-child {
-  padding-top: 0;
-}
-
-#footer .footer-top .footer-links ul a {
-  color: rgba(255, 255, 255, 0.8);
-  transition: 0.3s;
-  display: inline-block;
-  line-height: 1;
-}
-
-#footer .footer-top .footer-links ul a:hover {
-  text-decoration: underline;
-  color: #fff;
-}
-
-#footer .footer-newsletter {
-  font-size: 15px;
-}
-
-#footer .footer-newsletter h4 {
-  font-size: 16px;
-  font-weight: bold;
-  position: relative;
-  padding-bottom: 12px;
-}
-
-#footer .footer-newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 5px;
-  text-align: left;
-  border: 1px solid white;
-}
-
-#footer .footer-newsletter form input[type="email"] {
-  border: 0;
-  padding: 4px 8px;
-  width: calc(100% - 100px);
-}
-
-#footer .footer-newsletter form input[type="submit"] {
-  position: absolute;
-  top: -1px;
-  right: -2px;
-  bottom: -1px;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: rgba(123, 39, 216, 0.8);
-  color: #fff;
-  transition: 0.3s;
-  border-radius: 0 5px 5px 0;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
-
-#footer .footer-newsletter form input[type="submit"]:hover {
-  background: #5846f9;
-}
-
-#footer .copyright-wrap {
-  border-top: 1px solid #8577fb;
-}
-
-#footer .credits {
-  padding-top: 5px;
-  font-size: 13px;
-  color: #fff;
-}
-
-#footer .credits a {
-  color: #fff;
-}
-
-#footer .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-
-#footer .social-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  text-decoration: none;
-}
